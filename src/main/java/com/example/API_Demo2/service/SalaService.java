@@ -25,4 +25,11 @@ public class SalaService {
         }
     }
 
+    public List<Sala> buscarSalaPorNumero(Long numero){
+        return salaRepository.findByNumero(numero);
+    }
+
+    public List<Sala> BuscarPorCadeiras(Long cadeiras){
+        return salaRepository.findByCadeira(cadeiras);
+    }
 }

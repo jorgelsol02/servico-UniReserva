@@ -11,7 +11,7 @@ public class Sala {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long cadeiras;
+    private Long cadeira;
 
     private Long mesa;
 

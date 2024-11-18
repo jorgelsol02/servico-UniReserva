@@ -31,15 +31,25 @@ public class SalaController {
         return salaService.buscarSalaPorId(id);
     }
 
-    @DeleteMapping("/{id}")
-    public String deletarSala(@PathVariable Long id) {
-        try {
-            salaService.deletarSalaPorId(id);
-            return "Sala com ID " + id + " foi deletado com sucesso.";
-        } catch (IllegalArgumentException e) {
-            return e.getMessage();
-        }
+    @GetMapping("/buscar-por-numero")
+    public List<Sala> buscarPorNumero(@RequestParam Long numero){
+        return salaService.buscarSalaPorNumero(numero);
     }
+
+    @GetMapping("/qtd-cadeiras")
+    public List<Sala> buscarPorCadeiras(@RequestParam Long cadeira){
+        return salaService.BuscarPorCadeiras(cadeira);
+    }
+
+//    @DeleteMapping("/{id}")
+//    public String deletarSala(@PathVariable Long id) {
+//        try {
+//            salaService.deletarSalaPorId(id);
+//            return "Sala com ID " + id + " foi deletado com sucesso.";
+//        } catch (IllegalArgumentException e) {
+//            return e.getMessage();
+//        }
+//    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

@@ -9,5 +9,9 @@ import java.util.List;
 
 @Repository
 public interface SalaRepository extends JpaRepository<Sala, Long> {
- //teste
+
+    List<Sala> findByNumero (Long numero);
+
+    List<Sala> findByCadeira (Long cadeira);
+
 }
