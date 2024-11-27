@@ -15,10 +15,14 @@ public class Sala {
 
     private Long mesa;
 
-    private Long tamanho;
+    private String local;
 
     private Long numero;
 
+    private Long capacidade;
+
+    private Long tomadas;
+    
     private String tipo;
 
 }
