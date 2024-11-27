@@ -22,7 +22,7 @@ public class Sala {
     private Long capacidade;
 
     private Long tomadas;
-    
+
     private String tipo;
 
 }
